@@ -25,7 +25,7 @@ Using the HoughLinesP(),detect line co-ordinates for every points in the images.
 ## Program:
 ```Python
 
-# Read image and convert it to grayscale image
+Read image and convert it to grayscale image
 ## Developed by : Kavinraja D
 ## Reg no : 2122240047
 import cv2
@@ -36,7 +36,7 @@ img= cv2.GaussianBlur(image1,(3,3),0)
 plt.imshow(img)
 
 
-# Find the edges in the image using canny detector and display
+Find the edges in the image using canny detector and display
 ## Developed by : Kavinraja D
 ## Reg no : 2122240047
 edges1 = cv2.Canny(img,100,200)
@@ -46,14 +46,14 @@ plt.show()
 
 
 
-# Detect points that form a line using HoughLinesP
+Detect points that form a line using HoughLinesP
 ## Developed by : Kavinraja D
 ## Reg no : 2122240047
 lines=cv2.HoughLinesP(edges1,1,np.pi/180, threshold=80, minLineLength=50,maxLineGap=250)
 
 
 
-# Draw lines on the image
+ Draw lines on the image
 ## Developed by : Kavinraja D
 ## Reg no : 2122240047
 for line in lines:
@@ -62,7 +62,7 @@ for line in lines:
 
 
 
-# Display the result
+Display the result
 ## Developed by : Kavinraja D
 ## Reg no : 2122240047
 plt.imshow(edges1)
